@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<form startPosition="CenterParent"
+      caption="新建工程"
+      borderStyle ="FixedToolWindow">
+
+  <size width="589" height="400" />
+
+  <controls>
+
+    <__t virstream="panel"
+         controlName="panel1"
+         autoScroll="false"
+         dockStyle="Bottom">
+
+      <size height="71" />
+
+      <controls>
+
+        <__t virstream="button"
+             controlName="ok"
+             text="确定"
+             onClick="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewProjectOkCommand">
+
+          <point x="415" y="40" />
+
+        </__t>
+
+        <__t virstream="button"
+             controlName="cancel"
+             text="取消"
+             onClick="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewProjectCancelCommand">
+
+          <point x="495" y="40" />
+
+        </__t>
+
+        <__t virstream="textLabel"
+             controlName="textLabel1"
+             text="网络地址：">
+
+          <point x="8" y="16" />
+          <size width="66" height="12" />
+
+        </__t>
+
+        <__t virstream="textLabel"
+             controlName="textLabel2"
+             text="文件名称：">
+
+          <point x="8" y="46" />
+          <size width="66" height="12" />
+
+        </__t>
+
+        <__t virstream="textBox"
+             controlName="fileUrl"
+             default="url://www.nvwa.com/library/test">
+
+          <point x="74" y="9" />
+          <size width="496" height="21" />
+
+        </__t>
+
+        <__t virstream="textBox"
+             controlName="fileName"
+             default="test">
+
+          <point x="74" y="41" />
+          <size width="334" height="21" />
+
+        </__t>
+
+      </controls>
+
+    </__t>
+
+    <__t virstream="panel"
+         controlName="panel2"
+         autoScroll="false"
+         dockStyle="Fill">
+
+      <size height="71" />
+
+      <controls>
+
+        <__t virstream="listView"
+             controlName="listView1"
+             viewStyle="false"
+             dockStyle="Fill" />
+
+        <__t virstream="treeView"
+             controlName="treeView1"
+             showRootLines="true"
+             dockStyle="Left"
+             initCommand="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.TreeViewInitCommand">
+
+          <size width="160" />
+
+        </__t>
+
+      </controls>
+
+    </__t>
+
+  </controls>
+
+</form>

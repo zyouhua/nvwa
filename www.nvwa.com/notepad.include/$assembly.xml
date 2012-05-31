@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<assemblyDescriptor>
+
+  <dependences>
+
+    <__str><![CDATA[url://www.nvwa.com/include/os\window.include]]></__str>
+
+  </dependences>
+
+  <uids>
+
+    <__t id="notepad.include.window"
+         include="url://www.nvwa.com/include/os\window.include"
+         optimal="url://www.nvwa.com/library/os\window.optimal"
+         forceUsed="false"/>
+
+  </uids>
+
+  <rids />
+
+</assemblyDescriptor>

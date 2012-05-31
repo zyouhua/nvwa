@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<form startPosition="CenterScreen"
+      icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconNotepad.png"
+      caption="女娲网">
+
+  <size width="800" height="600" />
+
+  <controls>
+
+    <__t virstream="dockPanel"
+         controlName="dockPanel1"
+         dockStyle="Fill"
+         dBClickTab="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.DBClickDockTab">
+
+      <dockPads>
+
+        <__t padName="solutionPad"
+             caption="解决方案管理器"
+             dockStyle="DockRight"
+             icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolutionPad.ico">
+
+          <controls>
+
+            <__t virstream="treeView"
+                 controlName="treeView1"
+                 showRootLines="true"
+                 dockStyle="Fill" />
+
+          </controls>
+
+        </__t>
+
+        <__t padName="toolBoxPad"
+             caption="工具栏"
+             dockStyle="DockLeft"
+             icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolutionPad.ico">
+
+          <controls>
+
+            <__t virstream="sideBar"
+                 controlName="sideBar"
+                 dockStyle="Fill"
+                 initCommand="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.SideBarInitCommand"
+                 sideBarUrl="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*sideBar.xml"/>
+
+          </controls>
+
+        </__t>
+
+      </dockPads>
+
+    </__t>
+
+    <__t virstream="statusBar"
+         controlName="statusBar1" />
+
+    <__t virstream="toolPanel"
+         controlName="toolPanel"
+         dockStyle="Top">
+
+      <toolStrips>
+
+        <__t visible="true">
+
+          <toolStripItems>
+
+            <__t type="toolItem"
+                 tooltip="新建"
+                 icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconFile.png"
+                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewFileCommand" />
+
+            <__t type="toolItem"
+                 tooltip="打开"
+                 icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconOpenFile.png"
+                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewFileCommand" />
+
+            <__t type="toolItem"
+                 tooltip="保存"
+                 icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSave.png"
+                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.SaveFileCommand" />
+
+            <__t type="toolItem"
+                 tooltip="保存所有"
+                 icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSaveAll.png"
+                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.SaveAllCommand" />
+
+            <__t type="toolItem"
+                 tooltip="启动调试"
+                 icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconDebugStart.png"
+                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewFileCommand" />
+
+            <__t type="toolStripComboBox">
+
+              <toolStripComboBoxItems>
+
+                <__t tooltip="nvwa"
+                     command=""/>
+
+                <__t tooltip="c#"
+                     command=""/>
+
+                <__t tooltip="c++"
+                     command=""/>
+
+              </toolStripComboBoxItems>
+
+            </__t>
+
+            <__t type="toolItem"
+                 tooltip="解决方案管理器"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+            <__t type="toolItem"
+                 tooltip="工具栏"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconToolBox.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenToolBoxPad" />
+
+          </toolStripItems>
+
+        </__t>
+
+      </toolStrips>
+
+    </__t>
+
+    <__t virstream="menuStrip"
+         controlName="menuStrip"
+         dockStyle="Top" >
+
+      <menuItems>
+
+        <__t label = "文件(&amp;F)">
+
+          <menuItems>
+
+            <__t label = "新建"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconFile.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewFileCommand" />
+
+            <__t label = "退出"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconExit.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.CloseWorkbench" />
+
+          </menuItems>
+
+        </__t>
+
+        <__t label = "编辑(&amp;E)">
+
+          <menuItems>
+
+            <__t label = "关于女娲IDE"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+          </menuItems>
+
+        </__t>
+        
+        <__t label = "视图(&amp;V)">
+
+          <menuItems>
+
+            <__t label = "解决方案管理器"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+            <__t label = "工具栏"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconToolBox.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenToolBoxPad" />
+
+          </menuItems>
+
+        </__t>
+
+        <__t label = "工程(&amp;E)">
+
+          <menuItems>
+
+            <__t label = "关于女娲IDE"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+          </menuItems>
+
+        </__t>
+
+        <__t label = "编译(&amp;E)">
+
+          <menuItems>
+
+            <__t label = "关于女娲IDE"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+          </menuItems>
+
+        </__t>
+
+        <__t label = "调试(&amp;E)">
+
+          <menuItems>
+
+            <__t label = "关于女娲IDE"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+          </menuItems>
+
+        </__t>
+
+        <__t label = "帮助(&amp;H)">
+
+          <menuItems>
+
+            <__t label = "关于女娲IDE"
+                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
+                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
+
+          </menuItems>
+
+        </__t>
+
+      </menuItems>
+
+    </__t>
+
+  </controls>
+
+</form>

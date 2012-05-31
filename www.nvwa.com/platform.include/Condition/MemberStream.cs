@@ -1,0 +1,52 @@
+﻿using System.Collections.Generic;
+
+namespace platform.include
+{
+    public class MemberStream : Stream
+    {
+        public override void _serialize(ISerialize nSerialize)
+        {
+            nSerialize._serialize(ref mConditionStreams, @"conditions");
+            nSerialize._serialize(ref mValue, @"value");
+            nSerialize._serialize(ref mName, @"name");
+        }
+
+        public void _setName(string nName)
+        {
+            mName = nName;
+            base._runDirty();
+        }
+
+        public string _getName()
+        {
+            return mName;
+        }
+
+        public void _setValue(string nValue)
+        {
+            mValue = nValue;
+            base._runDirty();
+        }
+
+        public string _getValue()
+        {
+            return mValue;
+        }
+
+        public IEnumerable<ConditionStream> _getConditionStreams()
+        {
+        	return mConditionStreams;
+        }
+
+        public MemberStream()
+        {
+            mConditionStreams = new List<ConditionStream>();
+            mValue = null;
+            mName = null;
+        }
+
+        List<ConditionStream> mConditionStreams;
+        string mValue;
+        string mName;
+    }
+}

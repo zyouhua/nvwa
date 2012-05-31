@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<contextMenuStrip>
+
+  <contextMenuItems>
+
+    <__t label="添加"
+         icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconFile.png">
+
+      <contextMenuItems>
+
+        <__t label="新建文件"
+             icon="url://www.nvwa.com/library/program\program.optimal/descriptor*iconNewFile.png"
+             command="" />
+
+        <__t label="新建文件夹"
+             icon="url://www.nvwa.com/library/program\program.optimal/descriptor*iconNewFolder.png"
+             command="" />
+        
+      </contextMenuItems>
+      
+    </__t>
+
+    <__t label="属性     &amp;Alt+Enter"
+         icon="url://www.nvwa.com/library/program\program.optimal/descriptor*iconPropertyClosed.png"
+         command="url://www.nvwa.com/library/program\program.optimal:program.optimal.OpenCProjectPropertyCommand" />
+    
+  </contextMenuItems>
+
+</contextMenuStrip>

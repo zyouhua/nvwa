@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sideTab sideTabName="project"
+         visible="false"
+         sideTabImageUrl="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png">
+  
+  <sideTabItems>
+    
+    <__t name="class"
+         id="program.optimal.ClassCreator"
+         mail="zyouhua@gmail.com"
+         tag="url://www.nvwa.com/library/program\program.optimal:program.optimal.ClassCreator"
+         imageUrl="url://www.nvwa.com/library/program\program.optimal/descriptor*iconClass.png" />
+    
+  </sideTabItems>
+  
+  <memberStreams>
+    
+    <__t name="visible"
+         value="true">
+      
+      <conditions>
+        
+        <condition name="ActiveDockUrl"
+                   type="or"
+                   value="program.optimal.Project"/>
+        
+        <condition name="DockUrlWidget"
+                   type="and"
+                   value="window.optimal.Canvas"/>
+        
+      </conditions>
+      
+    </__t>
+    
+  </memberStreams>
+  
+</sideTab>
