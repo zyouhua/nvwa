@@ -7,6 +7,10 @@
             return mStyleName;
         }
 
+        public LineStyle()
+        {
+            mStyleName = null;
+        }
         string mStyleName;
     }
 }

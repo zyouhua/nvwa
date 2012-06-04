@@ -41,6 +41,11 @@ namespace window.optimal
             return mTextBox;
         }
 
+        public void _setText(string nText)
+        {
+            mTextBox.Text = nText;
+        }
+
         public string _getText()
         {
             return mTextBox.Text;

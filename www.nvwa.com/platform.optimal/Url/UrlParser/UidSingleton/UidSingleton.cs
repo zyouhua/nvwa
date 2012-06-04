@@ -14,6 +14,10 @@ namespace platform.optimal
                 throw new UidOverlapException();
             }
             mUids[name_] = nUid;
+            if (!nUid._isInclude())
+            {
+                return;
+            }
             if (nUid._forceUsed())
             {
                 return;

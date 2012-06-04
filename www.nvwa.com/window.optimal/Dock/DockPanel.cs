@@ -188,6 +188,11 @@ namespace window.optimal
             }
         }
 
+        public IDockUrl _getActiveDockUrl()
+        {
+            return mActiveDockUrl;
+        }
+
         public void _setDockStyle(string nDockStyle)
         {
             mDockStyle = nDockStyle;
@@ -211,12 +216,22 @@ namespace window.optimal
             DockFrame dockFrame_ = mDockPanel.ActiveDocument as DockFrame;
             if (null != dockFrame_ && !dockFrame_.IsDisposed)
             {
-                IDockUrl dockUrl_ = dockFrame_._getDockUrl();
-                if (null != dockUrl_)
+                if (null != mActiveDockUrl)
                 {
-                    dockUrl_._runActive();
+                    mActiveDockUrl._runDeActive();
+                }
+                mActiveDockUrl = dockFrame_._getDockUrl();
+                if (null != mActiveDockUrl)
+                {
+                    mActiveDockUrl._runActive();
                 }
             }
+            else
+            {
+                mActiveDockUrl = null;
+            }
+            UpdateSingleton updateSingleton_ = __singleton<UpdateSingleton>._instance();
+            updateSingleton_._runUpdate();
         }
 
         public DockPanel()
@@ -226,6 +241,7 @@ namespace window.optimal
             mDBClickTabCmd = null;
             mDockPanel = null;
             mDockStyle = @"None";
+            mActiveDockUrl = null;
         }
 
         Dictionary<string, DockPad> mDockPads;
@@ -233,5 +249,6 @@ namespace window.optimal
         ICommand mDBClickTabCommand;
         string mDBClickTabCmd;
         string mDockStyle;
+        IDockUrl mActiveDockUrl;
     }
 }

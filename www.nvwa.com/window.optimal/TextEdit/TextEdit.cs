@@ -89,11 +89,12 @@ namespace window.optimal
             mUrl = nUrl;
         }
 
-        public void _runSave()
+        public override void _runSave()
         {
             UrlParser urlParser_ = new UrlParser(mUrl);
             string path_ = urlParser_._returnResult();
             mTextEditorControl.SaveFile(path_);
+            base._runSave();
         }
 
         public void _setHighlighting(string nHighlighting)

@@ -10,6 +10,7 @@
   <uids>
 
     <__t id="notepad.implement.window"
+         isInclude="true"
          include="url://www.nvwa.com/include/os\window.include"
          optimal="url://www.nvwa.com/library/os\window.optimal"
          forceUsed="false"/>
@@ -22,11 +23,23 @@
          url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*formDescriptor.xml" />
 
     <__t id="notepad.implement.newProjectFormUrl"
-     url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*newProjectForm.xml" />
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*newProjectForm.xml" />
+
+    <__t id="notepad.implement.openFileDialogUrl"
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*openFileDialog.xml" />
 
     <__t id="notepad.implement.newProjectUrl"
          url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*newProjectUrl.xml" />
 
+    <__t id="notepad.implement.bindingManager"
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*bindingManager.xml" />
+
+    <__t id="notepad.implement.closeFolderImageUrl"
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconClosedFolder.png" />
+
+    <__t id="notepad.implement.iconFileImageUrl"
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconFile.png" />
+    
   </rids>
 
 </assemblyDescriptor>

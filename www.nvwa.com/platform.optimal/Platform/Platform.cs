@@ -9,6 +9,31 @@ namespace platform.optimal
 {
     public class Platform : IPlatform
     {
+        public string[] _rootUrls()
+        {
+            return UrlParser._rootUrls();
+        }
+
+        public string[] _files(string nUrl)
+        {
+            return UrlParser._files(nUrl);
+        }
+
+        public string[] _arcs(string nUrl)
+        {
+            return UrlParser._arcs(nUrl);
+        }
+
+        public string[] _dirUrls(string nUrl)
+        {
+            return UrlParser._dirUrls(nUrl);
+        }
+
+        public string[] _fileUrls(string nUrl)
+        {
+            return UrlParser._fileUrls(nUrl);
+        }
+
         public void _newHeadstream<__t>(__t nT, string nUrl) where __t : IHeadstream
         {
             if (!this._isUfl(nUrl))

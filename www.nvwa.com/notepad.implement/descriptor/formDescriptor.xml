@@ -72,7 +72,7 @@
             <__t type="toolItem"
                  tooltip="打开"
                  icon="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconOpenFile.png"
-                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewFileCommand" />
+                 command="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenFileCommand" />
 
             <__t type="toolItem"
                  tooltip="保存"
@@ -146,17 +146,7 @@
 
         </__t>
 
-        <__t label = "编辑(&amp;E)">
-
-          <menuItems>
-
-            <__t label = "关于女娲IDE"
-                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
-                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
-
-          </menuItems>
-
-        </__t>
+        <__t label = "编辑(&amp;E)" />
         
         <__t label = "视图(&amp;V)">
 
@@ -174,41 +164,11 @@
 
         </__t>
 
-        <__t label = "工程(&amp;E)">
+        <__t label = "工程(&amp;E)" />
 
-          <menuItems>
+        <__t label = "编译(&amp;E)" />
 
-            <__t label = "关于女娲IDE"
-                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
-                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
-
-          </menuItems>
-
-        </__t>
-
-        <__t label = "编译(&amp;E)">
-
-          <menuItems>
-
-            <__t label = "关于女娲IDE"
-                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
-                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
-
-          </menuItems>
-
-        </__t>
-
-        <__t label = "调试(&amp;E)">
-
-          <menuItems>
-
-            <__t label = "关于女娲IDE"
-                 icon = "url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png"
-                 command = "url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenSolutionPad" />
-
-          </menuItems>
-
-        </__t>
+        <__t label = "调试(&amp;E)"/>
 
         <__t label = "帮助(&amp;H)">
 

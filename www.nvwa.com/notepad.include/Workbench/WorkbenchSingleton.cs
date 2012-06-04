@@ -46,20 +46,9 @@ namespace notepad.include
             }
         }
 
-        public void _setActiveDockUrl(IDockUrl nDockUrl)
-        {
-            if (null != mActiveDockUrl)
-            {
-                mActiveDockUrl._runDeActive();
-            }
-            mActiveDockUrl = nDockUrl;
-            UpdateSingleton updateSingleton_ = __singleton<UpdateSingleton>._instance();
-            updateSingleton_._runUpdate();
-        }
-
         public IDockUrl _getActiveDockUrl()
         {
-            return mActiveDockUrl;
+            return mWorkbench._getActiveDockUrl();
         }
 
         public void _createContent(string nContentUrl, string nUrl, string nName)
@@ -100,12 +89,10 @@ namespace notepad.include
         public WorkbenchSingleton()
         {
             mContents = new Dictionary<string, IContent>();
-            mActiveDockUrl = null;
             mWorkbench = null;
         }
 
         Dictionary<string, IContent> mContents;
-        IDockUrl mActiveDockUrl;
         IWorkbench mWorkbench;
     }
 }

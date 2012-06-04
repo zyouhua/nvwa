@@ -19,10 +19,16 @@
             mUrl = nUrl;
         }
 
+        public event _RunSlot m_tLoadInit;
+
         public virtual void _loadInit()
         {
             SaveSingleton saveSingleton_ = __singleton<SaveSingleton>._instance();
             saveSingleton_._addSave(this);
+            if (null != m_tLoadInit)
+            {
+                this.m_tLoadInit();
+            }
         }
 
         public virtual void _runSave(string nUrl)

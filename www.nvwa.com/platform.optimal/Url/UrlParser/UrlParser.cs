@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.IO;
+using System.Collections.Generic;
 
 using platform.include;
 
@@ -6,6 +7,111 @@ namespace platform.optimal
 {
     public class UrlParser
     {
+        public static string[] _rootUrls()
+        {
+            List<string> result_ = new List<string>();
+            SettingSingleton settingSingleton_ = __singleton<SettingSingleton>._instance();
+            string urlDirectory_ = settingSingleton_._urlDirectory();
+            string[] dirUrls_ = Directory.GetDirectories(urlDirectory_);
+            foreach (string i in dirUrls_)
+            {
+                int index_ = i.LastIndexOf(@"\");
+                string dirName_ = i.Substring(index_ + 1);
+                if (dirName_.StartsWith(@"www."))
+                {
+                    string urlName_ = @"url://" + dirName_;
+                    result_.Add(urlName_);
+                }
+            }
+            return result_.ToArray();
+        }
+
+        public static string[] _files(string nUrl)
+        {
+            List<string> result_ = new List<string>();
+            UrlParser urlParser_ = new UrlParser(nUrl);
+            string urlDir_ = urlParser_._urlDir();
+            string[] fileUrls_ = Directory.GetFiles(urlDir_);
+            foreach (string i in fileUrls_)
+            {
+                int index_ = i.LastIndexOf(@"\");
+                string fileName_ = i.Substring(index_ + 1);
+                string urlName_ = nUrl + @"*" + fileName_;
+                result_.Add(urlName_);
+            }
+            return result_.ToArray();
+        }
+        
+        public static string[] _arcs(string nUrl)
+        {
+            List<string> result_ = new List<string>();
+            UrlParser urlParser_ = new UrlParser(nUrl);
+            string urlDir_ = urlParser_._urlDir();
+            string[] dirUrls_ = Directory.GetDirectories(urlDir_);
+            foreach (string i in dirUrls_)
+            {
+                int index_ = i.LastIndexOf(@"\");
+                string dirName_ = i.Substring(index_ + 1);
+                if (!dirName_.StartsWith(@"^arc^"))
+                {
+                    continue;
+                }
+                index_ = dirName_.LastIndexOf(@"^");
+                string fileName_ = dirName_.Substring(index_ + 1);
+                string urlName_ = nUrl + @"\" + fileName_;
+                result_.Add(urlName_);
+            }
+            return result_.ToArray();
+        }
+
+        public static string[] _dirUrls(string nUrl)
+        {
+            List<string> result_ = new List<string>();
+            UrlParser urlParser_ = new UrlParser(nUrl);
+            string urlDir_ = urlParser_._urlDir();
+            string[] dirUrls_ = Directory.GetDirectories(urlDir_);
+            foreach (string i in dirUrls_)
+            {
+                int index_ = i.LastIndexOf(@"\");
+                string dirName_ = i.Substring(index_ + 1);
+                if (dirName_.StartsWith(@"^arc^"))
+                {
+                    continue;
+                }
+                if (dirName_.StartsWith(@"^file^"))
+                {
+                    continue;
+                }
+                index_ = dirName_.LastIndexOf(@"^");
+                string fileName_ = dirName_.Substring(index_ + 1);
+                string urlName_ = nUrl + @"/" + fileName_;
+                result_.Add(urlName_);
+            }
+            return result_.ToArray();
+        }
+
+        public static string[] _fileUrls(string nUrl)
+        {
+            List<string> result_ = new List<string>();
+            UrlParser urlParser_ = new UrlParser(nUrl);
+            string urlDir_ = urlParser_._urlDir();
+            string[] dirUrls_ = Directory.GetDirectories(urlDir_);
+            foreach (string i in dirUrls_)
+            {
+                int index_ = i.LastIndexOf(@"\");
+                string dirName_ = i.Substring(index_ + 1);
+                if (!dirName_.StartsWith(@"^file^"))
+                {
+                    continue;
+                }
+                index_ = dirName_.LastIndexOf(@"^");
+                string fileName_ = dirName_.Substring(index_ + 1);
+                string urlName_ = nUrl + @"\" + fileName_;
+                result_.Add(urlName_);
+            }
+            return result_.ToArray();
+        }
+
         public bool _isUdl()
         {
             if (this._isClass())

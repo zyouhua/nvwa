@@ -35,6 +35,7 @@
         {
             mUrl = null;
         }
+
         string mUrl;
     }
 }

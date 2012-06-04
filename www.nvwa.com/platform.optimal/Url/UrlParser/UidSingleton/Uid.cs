@@ -6,10 +6,21 @@ namespace platform.optimal
     {
         public override void _serialize(ISerialize nSerialize)
         {
+            nSerialize._serialize(ref mIsInclude, @"isInclude");
             nSerialize._serialize(ref mForceUsed, @"forceUsed");
             nSerialize._serialize(ref mOptimal, @"optimal");
             nSerialize._serialize(ref mInclude, @"include");
             nSerialize._serialize(ref mName, @"id");
+        }
+
+        public void _setIsInclude(bool nIsInclude)
+        {
+            mIsInclude = nIsInclude;
+        }
+
+        public bool _isInclude()
+        {
+            return mIsInclude;
         }
 
         public void _setForceUsed(bool nForceUsed)
@@ -31,6 +42,10 @@ namespace platform.optimal
 
         public string _getOptimal()
         {
+            if (!mIsInclude)
+            {
+                return mInclude;
+            }
             return mOptimal;
         }
 
@@ -63,6 +78,10 @@ namespace platform.optimal
 
         public Uid _getUid()
         {
+            if (!mIsInclude)
+            {
+                return this;
+            }
             if (mForceUsed)
             {
                 return this;
@@ -76,6 +95,7 @@ namespace platform.optimal
 
         public Uid()
         {
+            mIsInclude = true;
             mForceUsed = false;
             mOptimal = null;
             mInclude = null;
@@ -83,6 +103,7 @@ namespace platform.optimal
             mUid = null;
         }
 
+        bool mIsInclude;
         bool mForceUsed;
         string mOptimal;
         string mInclude;

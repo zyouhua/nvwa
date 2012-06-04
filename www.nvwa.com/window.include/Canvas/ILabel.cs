@@ -4,13 +4,13 @@ namespace window.include
 {
     public interface ILabel : IRect
     {
-        void _setX(int nX);
-
-        int _getX();
-
         void _setY(int nY);
 
         int _getY();
+
+        void _setX(int nX);
+
+        int _getX();
 
         void _setWidth(int nWidth);
 

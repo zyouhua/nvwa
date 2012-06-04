@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 
 using window.include;
@@ -12,6 +13,10 @@ namespace window.optimal
         {
             nSerialize._serialize(ref mDockStyle, @"dockStyle");
             nSerialize._serialize(ref mViewStyle, @"viewStyle");
+            nSerialize._serialize(ref mInitCmd, @"initCommand");
+            nSerialize._serialize(ref mLoadCmd, @"loadCommand");
+            nSerialize._serialize(ref mItemActivateCmd, @"itemActivateCommand");
+            nSerialize._serialize(ref mSelectedIndexChangedCmd, @"selectedIndexChangedCommand");
             nSerialize._serialize(ref mSize, @"size");
             base._serialize(nSerialize);
         }
@@ -19,6 +24,33 @@ namespace window.optimal
         public override string _virstream()
         {
             return @"listView";
+        }
+
+        public override void _runInit()
+        {
+            PlatformSingleton platformSingleton_ = __singleton<PlatformSingleton>._instance();
+            mInitCommand = platformSingleton_._findInterface<ICommand>(mInitCmd);
+            if (null != mInitCommand)
+            {
+                mInitCommand._setOwner(mContain);
+                mInitCommand._runCommand();
+            }
+            mLoadCommand = platformSingleton_._findInterface<ICommand>(mLoadCmd);
+            if (null != mLoadCommand)
+            {
+                mLoadCommand._setOwner(mContain);
+            }
+            mItemActivateCommand = platformSingleton_._findInterface<ICommand>(mItemActivateCmd);
+            if (null != mItemActivateCommand)
+            {
+                mItemActivateCommand._setOwner(mContain);
+            }
+            mSelectedIndexChangedCommand = platformSingleton_._findInterface<ICommand>(mSelectedIndexChangedCmd);
+            if (null != mSelectedIndexChangedCommand)
+            {
+                mSelectedIndexChangedCommand._setOwner(mContain);
+            }
+            base._runInit();
         }
 
         public override void _initControl()
@@ -77,6 +109,12 @@ namespace window.optimal
                 }
                 ImageSingleton imageSingleton_ = __singleton<ImageSingleton>._instance();
                 mListView.SmallImageList = imageSingleton_._getImageList();
+                mListView.ItemActivate += _onItemActivate;
+                mListView.SelectedIndexChanged += _selectedIndexChanged;
+                if (null != mLoadCommand)
+                {
+                    mLoadCommand._runCommand();
+                }
             }
         }
 
@@ -120,6 +158,22 @@ namespace window.optimal
             mListView.Clear();
         }
 
+        void _onItemActivate(object sender, EventArgs e)
+        {
+            if (null != mItemActivateCommand)
+            {
+                mItemActivateCommand._runCommand();
+            }
+        }
+
+        void _selectedIndexChanged(object sender, EventArgs e)
+        {
+            if (null != mSelectedIndexChangedCommand)
+            {
+                mSelectedIndexChangedCommand._runCommand();
+            }
+        }
+
         public void _setDockStyle(string nDockStyle)
         {
             mDockStyle = nDockStyle;
@@ -145,6 +199,14 @@ namespace window.optimal
             mDockStyle = @"None";
             mViewStyle = "List";
             mContain = null;
+            mInitCommand = null;
+            mInitCmd = null;
+            mLoadCommand = null;
+            mLoadCmd = null;
+            mItemActivateCommand = null;
+            mItemActivateCmd = null;
+            mSelectedIndexChangedCommand = null;
+            mSelectedIndexChangedCmd = null;
             mSize = null;
         }
 
@@ -152,6 +214,14 @@ namespace window.optimal
         string mDockStyle;
         string mViewStyle;
         IContain mContain;
+        ICommand mInitCommand;
+        string mInitCmd;
+        ICommand mLoadCommand;
+        string mLoadCmd;
+        ICommand mItemActivateCommand;
+        string mItemActivateCmd;
+        ICommand mSelectedIndexChangedCommand;
+        string mSelectedIndexChangedCmd;
         Size2I mSize;
     }
 }

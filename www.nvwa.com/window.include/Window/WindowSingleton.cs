@@ -4,6 +4,11 @@ namespace window.include
 {
     public class WindowSingleton : IWindow
     {
+        public void _regShapeDescriptor(string nShapeDescriptorUrl)
+        {
+            mWindow._regShapeDescriptor(nShapeDescriptorUrl);
+        }
+
         public IForm _loadForm(string nFormDescriptorUrl)
         {
             return mWindow._loadForm(nFormDescriptorUrl);

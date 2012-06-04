@@ -11,6 +11,7 @@
   <uids>
 
     <__t id="program.optimal.window"
+         isInclude="true"
          include="url://www.nvwa.com/include/os\window.include"
          optimal="url://www.nvwa.com/library/os\window.optimal"
          forceUsed="false"/>

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 
+using window.include;
 using platform.include;
 
 namespace window.optimal

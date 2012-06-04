@@ -9,5 +9,7 @@ namespace notepad.include
         void _showDockUrl(IDockUrl nDockUrl);
 
         void _showTreeNode(ITreeNode nTreeNode);
+
+        IDockUrl _getActiveDockUrl();
     }
 }

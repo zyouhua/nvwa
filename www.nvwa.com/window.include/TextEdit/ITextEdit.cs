@@ -9,7 +9,5 @@
         void _openUrl(string nUrl);
 
         void _createUrl(string nUrl);
-
-        void _runSave();
     }
 }

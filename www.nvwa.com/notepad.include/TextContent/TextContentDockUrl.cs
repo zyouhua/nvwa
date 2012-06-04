@@ -21,6 +21,7 @@ namespace notepad.include
 
         public override void _openUrl(string nUrl)
         {
+            this._initDockWidgets();
             ITextEdit textEdit_ = mTextDockWidget._getTextEdit();
             textEdit_._openUrl(nUrl);
             this._setUrl(nUrl);

@@ -33,6 +33,11 @@ namespace program.optimal
             base._runInit();
         }
 
+        private void _loadInit()
+        {
+
+        }
+
         public override void _initDockWidgets()
         {
             base._initDockWidgets();
@@ -68,12 +73,6 @@ namespace program.optimal
             base._createUrl(nUrl, fileName_);
         }
 
-        public void _setProjectName(string nProjectName)
-        {
-            mProjectName = nProjectName;
-            base._setTreeNodeName(nProjectName);
-        }
-
         public override IUrl _getIUrl()
         {
             return mProjectUrl;
@@ -96,7 +95,6 @@ namespace program.optimal
             return mNvwaProjectImage;
         }
 
-
         public override ICanvasDockWidget _getCanvasDockWidget()
         {
             return mProjectCanvas;
@@ -105,6 +103,12 @@ namespace program.optimal
         public override string _getDockUrlName()
         {
             return mProjectName;
+        }
+
+        public void _setProjectName(string nProjectName)
+        {
+            mProjectName = nProjectName;
+            base._setTreeNodeName(nProjectName);
         }
 
         public string _getProjectName()
@@ -122,6 +126,7 @@ namespace program.optimal
             mProjectUrl.m_tHeadSerializeSlot += this._headSerialize;
             mProjectUrl.m_tSerializeTypeSlot += this._serializeType;
             mProjectUrl.m_tStreamNameSlot += this._streamName;
+            mProjectUrl.m_tLoadInit += this._loadInit;
         }
 
         ProjectDockWidget mProjectDockWidget;

@@ -8,6 +8,12 @@ namespace window.optimal
 {
     public class Window : IWindow
     {
+        public void _regShapeDescriptor(string nShapeDescriptorUrl)
+        {
+            ShapeDescriptorSingleton shapeDescriptorSingleton_ = __singleton<ShapeDescriptorSingleton>._instance();
+            shapeDescriptorSingleton_._regDescriptor(nShapeDescriptorUrl);
+        }
+
         public IForm _loadForm(string nFormDescriptorUrl)
         {
             PlatformSingleton platformSingleton_ = __singleton<PlatformSingleton>._instance();
@@ -36,6 +42,7 @@ namespace window.optimal
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Button button_ = new Button();
             this._regControl(button_);
             MenuStrip menuStrip_ = new MenuStrip();
@@ -62,6 +69,10 @@ namespace window.optimal
             this._regControl(textEdit_);
             ComboBox combox_ = new ComboBox();
             this._regControl(combox_);
+
+            StyleSingleton styleSingleton_ = __singleton<StyleSingleton>._instance();
+            styleSingleton_._loadDefaultStyle();
+
             mInited = true;
         }
         

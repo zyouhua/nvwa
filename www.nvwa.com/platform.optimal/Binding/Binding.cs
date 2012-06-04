@@ -8,7 +8,7 @@ namespace platform.optimal
         {
             nSerialize._serialize(ref mClass, @"class");
             nSerialize._serialize(ref mName, @"name");
-            nSerialize._serialize(ref mUid, @"url");
+            nSerialize._serialize(ref mUid, @"uid");
             nSerialize._serialize(ref mImage, @"image");
         }
 
@@ -19,6 +19,7 @@ namespace platform.optimal
 
         public void _setUid(Uid nUid)
         {
+            mUid._setIsInclude(nUid._isInclude());
             mUid._setForceUsed(nUid._forceUsed());
             mUid._setOptimal(nUid._getOptimal());
             mUid._setInclude(nUid._getInclude());

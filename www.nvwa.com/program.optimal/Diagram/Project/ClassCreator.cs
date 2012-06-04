@@ -6,7 +6,10 @@ namespace program.optimal
     {
         public override ILabel _exeCreate()
         {
-            return null;
+            ProjectCanvas projectCanvas_ = this._getObject() as ProjectCanvas;
+            ClassShape classShape_ = new ClassShape();
+            projectCanvas_._addClassShape(classShape_);
+            return classShape_;
         }
     }
 }

@@ -19,6 +19,11 @@ namespace window.optimal
             base._serialize(nSerialize);
         }
 
+        public override string _virstream()
+        {
+            return "treeView";
+        }
+
         public override void _runInit()
         {
             PlatformSingleton platformSingleton_ = __singleton<PlatformSingleton>._instance();
@@ -34,11 +39,6 @@ namespace window.optimal
                 mLoadCommand._setOwner(mContain);
             }
             base._runInit();
-        }
-
-        public override string _virstream()
-        {
-            return "treeView";
         }
 
         public override void _initControl()

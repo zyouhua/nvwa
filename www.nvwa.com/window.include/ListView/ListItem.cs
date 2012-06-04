@@ -18,7 +18,7 @@ namespace window.include
 
         public event _SetStringSlot m_tListItemNameChange;
 
-        public void _setListItemName(string nListItemName)
+        public virtual void _setListItemName(string nListItemName)
         {
             if (null != m_tListItemNameChange)
             {

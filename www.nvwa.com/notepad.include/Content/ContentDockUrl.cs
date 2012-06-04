@@ -40,14 +40,17 @@ namespace notepad.include
             base._runInit();
         }
 
+        public override IDockUrl _getDockUrl()
+        {
+            return this;
+        }
+
         public virtual void _initDockWidgets()
         {
         }
 
         public virtual void _runActive()
         {
-            WorkbenchSingleton workbenchSingleton_ = __singleton<WorkbenchSingleton>._instance();
-            workbenchSingleton_._setActiveDockUrl(this);
         }
 
         public virtual void _runDeActive()

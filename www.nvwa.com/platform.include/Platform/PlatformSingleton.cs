@@ -2,6 +2,31 @@
 {
     public class PlatformSingleton : IPlatform
     {
+        public string[] _rootUrls()
+        {
+            return mPlatform._rootUrls();
+        }
+
+        public string[] _files(string nUrl)
+        {
+            return mPlatform._files(nUrl);
+        }
+
+        public string[] _arcs(string nUrl)
+        {
+            return mPlatform._arcs(nUrl);
+        }
+
+        public string[] _dirUrls(string nUrl)
+        {
+            return mPlatform._dirUrls(nUrl);
+        }
+
+        public string[] _fileUrls(string nUrl)
+        {
+            return mPlatform._fileUrls(nUrl);
+        }
+
         public void _newHeadstream<__t>(__t nT, string nUrl) where __t : IHeadstream
         {
             mPlatform._newHeadstream<__t>(nT, nUrl);

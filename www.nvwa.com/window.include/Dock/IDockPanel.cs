@@ -15,5 +15,7 @@ namespace window.include
         void _padsHide();
 
         void _padsShow();
+
+        IDockUrl _getActiveDockUrl();
     }
 }

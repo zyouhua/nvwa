@@ -2,6 +2,16 @@
 {
     public interface IPlatform
     {
+        string[] _rootUrls();
+
+        string[] _files(string nUrl);
+
+        string[] _arcs(string nUrl);
+
+        string[] _dirUrls(string nUrl);
+
+        string[] _fileUrls(string nUrl);
+
         void _newHeadstream<__t>(__t nT, string nUrl) where __t : IHeadstream;
 
         __t _findHeadstream<__t>(string nUrl) where __t : IHeadstream;

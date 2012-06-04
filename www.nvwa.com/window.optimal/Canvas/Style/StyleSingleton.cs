@@ -6,6 +6,12 @@ namespace window.optimal
 {
     public class StyleSingleton
     {
+        public void _loadDefaultStyle()
+        {
+            NormalRect normalRect_ = new NormalRect();
+            this._regRectStyle(normalRect_);
+        }
+
         public IRectStyle _rectStyle(string nRectStyle)
         {
             if (mRectStyles.ContainsKey(nRectStyle))

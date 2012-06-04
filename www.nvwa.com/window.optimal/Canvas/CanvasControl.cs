@@ -116,10 +116,10 @@ namespace window.optimal
         {
             if (e.Button == MouseButtons.Left)
             {
-                Point2I point0_ = new Point2I(e.X, e.Y);
+                Point2I point_ = new Point2I(e.X, e.Y);
                 ScreenSingleton screenSingleton_ = __singleton<ScreenSingleton>._instance();
-                Point2I point1_ = screenSingleton_._normalPoint(point0_);
-                this._leftDown(point1_);
+                point_ = screenSingleton_._normalPoint(point_);
+                this._leftDown(point_);
             }
             this.Refresh();
 
