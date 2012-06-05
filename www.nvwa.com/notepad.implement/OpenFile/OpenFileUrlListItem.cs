@@ -46,7 +46,7 @@ namespace notepad.implement
             return mListItemName;
         }
 
-        static string mListItemImageUrl = @"rid://notepad.implement.closeFolderImageUrl";
+        static string mListItemImageUrl = @"rid://notepad.implement.iconUrlImageUrl";
         public override string _getListItemImage()
         {
             return mListItemImageUrl;

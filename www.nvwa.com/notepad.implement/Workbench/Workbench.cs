@@ -9,7 +9,6 @@ namespace notepad.implement
         public void _showGraceful(string nWindowUrl, string nFormDescriptorUrl)
         {
             WindowSingleton windowSingleton_ = __singleton<WindowSingleton>._instance();
-            windowSingleton_._loadWindow(nWindowUrl);
             mForm = windowSingleton_._loadForm(nFormDescriptorUrl);
             mDockPanel = mForm._childControl("dockPanel1") as IDockPanel;
             mForm._appShow();

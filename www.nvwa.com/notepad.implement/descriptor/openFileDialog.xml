@@ -19,7 +19,7 @@
         <__t virstream="button"
              controlName="ok"
              text="确定"
-             onClick="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewProjectOkCommand">
+             onClick="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenFileOkCommand">
 
           <point x="415" y="8" />
 
@@ -28,7 +28,7 @@
         <__t virstream="button"
              controlName="cancel"
              text="取消"
-             onClick="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.NewProjectCancelCommand">
+             onClick="url://www.nvwa.com/implement/notepad\notepad.implement:notepad.implement.OpenFileCancelCommand">
 
           <point x="495" y="8" />
 

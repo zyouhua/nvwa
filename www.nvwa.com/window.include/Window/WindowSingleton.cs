@@ -19,10 +19,9 @@ namespace window.include
             return mWindow._getControl(nControl);
         }
 
-        public void _loadWindow(string nWindowUrl)
+        public void _setWindow(IWindow nWindow)
         {
-            PlatformSingleton platformSingleton_ = __singleton<PlatformSingleton>._instance();
-            mWindow = platformSingleton_._findInterface<IWindow>(nWindowUrl);
+            mWindow = nWindow;
         }
 
         public WindowSingleton()

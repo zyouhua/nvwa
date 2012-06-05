@@ -17,13 +17,6 @@ namespace notepad.implement
 
         public void _runInit()
         {
-            string bindingManagerUrl_ = @"rid://notepad.implement.bindingManager";
-            PlatformSingleton platformSingleton_ = __singleton<PlatformSingleton>._instance();
-            platformSingleton_._loadBindingManager(bindingManagerUrl_);
-            WorkbenchSingleton workbenchSingleton_ = __singleton<WorkbenchSingleton>._instance();
-            Workbench workbench_ = new Workbench();
-            workbenchSingleton_._setWorkbench(workbench_);
-            workbenchSingleton_._runInit();
         }
 
         public void _runApp()

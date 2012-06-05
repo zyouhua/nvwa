@@ -11,9 +11,26 @@ namespace notepad.implement
             IListView listView_ = contain_._childControl("listView1") as IListView;
             listView_._clearListItem();
             PlatformSingleton platformSingleton_ = __singleton<PlatformSingleton>._instance();
+            string[] arcUrls_ = platformSingleton_._arcs(mListItemName);
+            foreach (string i in arcUrls_)
+            {
+                OpenFileArcListItem openFileArcListItem_ = new OpenFileArcListItem();
+                openFileArcListItem_._setListItemName(i);
+                listView_._addListItem(openFileArcListItem_);
+            }
             string[] dirUrls_ = platformSingleton_._dirUrls(mListItemName);
             foreach (string i in dirUrls_)
             {
+                OpenFileDirListItem openFileDirListItem_ = new OpenFileDirListItem();
+                openFileDirListItem_._setListItemName(i);
+                listView_._addListItem(openFileDirListItem_);
+            }
+            string[] files_ = platformSingleton_._files(mListItemName);
+            foreach (string i in files_)
+            {
+                OpenFileFileListItem openFileFileListItem_ = new OpenFileFileListItem();
+                openFileFileListItem_._setListItemName(i);
+                listView_._addListItem(openFileFileListItem_);
             }
             base._listItemDoubleClick(nObject);
         }

@@ -11,12 +11,12 @@ namespace platform.optimal
         {
             UrlParser urlParser_ = new UrlParser(nUrl);
             string assemblyPath_ = urlParser_._returnResult();
-            AssemblyName assemblyName = AssemblyName.GetAssemblyName(assemblyPath_);
+            AssemblyName assemblyName_ = AssemblyName.GetAssemblyName(assemblyPath_);
             AppDomain appDomain_ = AppDomain.CurrentDomain;
             Assembly[] assemblies_ = appDomain_.GetAssemblies();
             foreach (Assembly i in assemblies_)
             {
-                if (string.Compare(i.FullName, assemblyName.FullName) == 0)
+                if (string.Compare(i.FullName, assemblyName_.FullName) == 0)
                 {
                     mAssembly = i;
                 }
@@ -24,6 +24,13 @@ namespace platform.optimal
             if (null == mAssembly)
             {
                 mAssembly = Assembly.LoadFrom(assemblyPath_);
+                string namespace_ = assemblyName_.Name;
+                string pluginClass_ = namespace_ + ".Plugin";
+                IPlugin plugin_ = mAssembly.CreateInstance(pluginClass_) as IPlugin;
+                if (null != plugin_)
+                {
+                    plugin_._startupPlugin();
+                }
             }
             base._runLoad(nUrl);
         }

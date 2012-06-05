@@ -7,14 +7,6 @@ namespace notepad.include
 {
     public class WorkbenchSingleton
     {
-        public void _runInit()
-        {
-            ConditionSingleton conditionSingleton_ = __singleton<ConditionSingleton>._instance();
-            conditionSingleton_._loadDefaultCondition();
-            conditionSingleton_._registerValidator(new ActiveContentValidator());
-            conditionSingleton_._registerValidator(new ContentWidgetValidator());
-        }
-
         public void _showGraceful(string nWindowUrl, string nFormDescriptorUrl)
         {
             mWorkbench._showGraceful(nWindowUrl, nFormDescriptorUrl);

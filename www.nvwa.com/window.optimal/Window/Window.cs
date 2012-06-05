@@ -40,8 +40,6 @@ namespace window.optimal
             {
                 return;
             }
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
 
             Button button_ = new Button();
             this._regControl(button_);
@@ -69,9 +67,6 @@ namespace window.optimal
             this._regControl(textEdit_);
             ComboBox combox_ = new ComboBox();
             this._regControl(combox_);
-
-            StyleSingleton styleSingleton_ = __singleton<StyleSingleton>._instance();
-            styleSingleton_._loadDefaultStyle();
 
             mInited = true;
         }

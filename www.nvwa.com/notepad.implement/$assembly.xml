@@ -39,7 +39,13 @@
 
     <__t id="notepad.implement.iconFileImageUrl"
          url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconFile.png" />
-    
+
+    <__t id="notepad.implement.iconArchiveImageUrl"
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconArchive.png" />
+
+    <__t id="notepad.implement.iconUrlImageUrl"
+         url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconUrl.png" />
+
   </rids>
 
 </assemblyDescriptor>

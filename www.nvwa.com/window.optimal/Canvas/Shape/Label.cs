@@ -75,6 +75,10 @@ namespace window.optimal
             mRectStyle = styleSingleton_._rectStyle(mRectDescriptor._getStyleName());
             mLabel = nlabel;
             List<IRect> rects_ = nlabel._getRects();
+            if (null == rects_)
+            {
+                return;
+            }
             foreach (IRect i in rects_)
             {
                 Rect rect_ = new Rect();

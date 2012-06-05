@@ -58,7 +58,10 @@
 
     <__t id="program.optimal.nvwaprojectImageUrl"
          url="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png" />
-    
+
+    <__t id="program.optimal.shapeDescriptorManagerUrl"
+         url="url://www.nvwa.com/library/program\program.optimal/descriptor*shapeDescriptorManager.xml" />
+
   </rids>
 
 </assemblyDescriptor>

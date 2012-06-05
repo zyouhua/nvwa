@@ -48,6 +48,13 @@ namespace platform.optimal
                 this._loadAssembly(i);
             }
             mAssembly = Assembly.LoadFrom(assemblyPath_);
+            string namespace_ = assemblyName_.Name;
+            string pluginClass_ = namespace_ + ".Plugin";
+            IPlugin plugin_ = mAssembly.CreateInstance(pluginClass_) as IPlugin;
+            if (null != plugin_)
+            {
+                plugin_._startupPlugin();
+            }
         }
 
         public object _findClass(string nId)

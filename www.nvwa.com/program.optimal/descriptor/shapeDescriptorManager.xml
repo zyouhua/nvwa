@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <shapeDescriptorManager>
-
+  
   <rectDescriptors>
     
     <__t streamName="zyouhua@gmail.com:classShape"
          styleName="normalRect"
          imageUrl="url://www.nvwa.com/library/program\program.optimal/descriptor*iconClass.png">
-
-      <draw a="" r="" g="" b=""/>
-
-      <fill a="" r="" g="" b=""/>
-
+      
+      <draw a="10" r="150" g="150" b="0"/>
+      
+      <fill a="10" r="0" g="150" b="150"/>
+      
     </__t>
     
   </rectDescriptors>
-
+  
   <lineDescriptors>
     
   </lineDescriptors>
