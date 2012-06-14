@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shapeDescriptorManager>
+
+  <lineDescriptors>
+    
+    <__t streamName="zyouhua@gmail.com:deriveShape"
+         styleName="singleEnd"
+         imageUrl="url://www.nvwa.com/library/program\program.optimal/descriptor*iconDerive.png">
+      
+      <draw a="255" r="0" g="150" b="0"/>
+      
+      <moveDraw a="200" r="0" g="150" b="0"/>
+
+      <pullDraw a="200" r="0" g="150" b="0"/>
+
+      <font familyName="Arial"
+            size="9"
+            bold="true">
+        
+        <rgb a="255" r="0" g="0" b="0" />
+        
+      </font>
+      
+    </__t>
+
+  </lineDescriptors>
+
+  <rectDescriptors>
+
+    <__t streamName="zyouhua@gmail.com:classShape"
+         imagePos="rectLeftTop"
+         imageUrl="url://www.nvwa.com/library/program\program.optimal/descriptor*iconClass.png">
+
+      <draw a="255" r="0" g="150" b="0"/>
+      
+      <moveDraw a="200" r="0" g="150" b="0"/>
+
+      <pullDraw a="200" r="0" g="150" b="0"/>
+
+      <createDraw a="200" r="242" g="0" b="121"/>
+
+      <fill a="255" r="220" g="255" b="220"/>
+      
+      <moveFill a="200" r="220" g="255" b="220"/>
+      
+      <pullFill a="200" r="220" g="255" b="220"/>
+      
+      <createFill a="150" r="255" g="208" b="255"/>
+
+      <font familyName="Arial"
+            size="9"
+            bold="true">
+
+        <rgb a="255" r="0" g="0" b="0" />
+
+      </font>
+
+    </__t>
+
+  </rectDescriptors>
+  
+</shapeDescriptorManager>

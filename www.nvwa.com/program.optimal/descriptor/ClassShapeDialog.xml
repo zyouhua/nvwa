@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<form startPosition="CenterScreen"
+      icon = ""
+      caption="创建类"
+      borderStyle="FixedToolWindow">
+
+  <size width="275" height="187" />
+
+  <controls>
+
+    <__t virstream="radioButton"
+         controlName="radioButton1"
+         text="命名空间："
+         checkCommand="url://www.nvwa.com/library/program\program.optimal:program.optimal.ClassShapeRadioCheckCommand">
+
+      <point x="11" y="59"/>
+      
+      <size width="104" height="22" />
+
+    </__t>
+
+    <__t virstream="button"
+         controlName="cancel"
+         text="取消"
+         onClick="url://www.nvwa.com/library/program\program.optimal:program.optimal.ClassShapeCancelCommand">
+
+      <point x="148" y="123" />
+
+      <size width="75" height="23" />
+
+    </__t>
+
+    <__t virstream="button"
+         controlName="ok"
+         enable="false"
+         text="确定"
+         onClick="url://www.nvwa.com/library/program\program.optimal:program.optimal.ClassShapeOkCommand">
+
+      <point x="40" y="123" />
+
+      <size width="75" height="23" />
+
+    </__t>
+
+    <__t virstream="comboBox"
+         controlName="comboBox1"
+         enable="false">
+
+      <point x="13" y="86" />
+      
+      <size width="250" height="20" />
+
+      <comboBoxItems>
+
+        <__t name="window" command=""/>
+        
+      </comboBoxItems>
+
+    </__t>
+
+    <__t virstream="textLabel"
+         controlName="textLabel1"
+         text="类名：">
+
+      <point x="12" y="10" />
+      <size width="65" height="18" />
+
+    </__t>
+
+    <__t virstream="textBox"
+         controlName="className"
+         textChangedCommand="url://www.nvwa.com/library/program\program.optimal:program.optimal.ClassShapeTextChangedCommand">
+
+      <point x="12" y="31" />
+      
+      <size width="251" height="21" />
+
+    </__t>
+
+  </controls>
+
+</form>

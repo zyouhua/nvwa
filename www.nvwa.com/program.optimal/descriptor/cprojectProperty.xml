@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<panel controlName="projectPropertyPanel"
+       autoScroll="false"
+       dockStyle="Fill">
+  
+  <backColor a="255" r="255" g="255" b="255"/>
+
+  <controls>
+
+    <__t virstream="textLabel"
+         controlName="textLabel1"
+         text="应用程序类型：">
+
+      <point x="8" y="20" />
+      <size width="91" height="12" />
+
+    </__t>
+
+    <__t virstream="comboBox"
+         controlName="comboBox1">
+
+      <point x="100" y="16" />
+
+      <comboBoxItems>
+
+        <__t name="window" command=""/>
+
+        <__t name="console" command=""/>
+
+        <__t name="library" command=""/>
+        
+      </comboBoxItems>
+      
+    </__t>
+  
+  </controls>
+
+</panel>

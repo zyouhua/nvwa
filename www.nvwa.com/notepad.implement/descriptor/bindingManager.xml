@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bindingManager>
+  
+  <bindings>
+    
+    <__t name="txt"
+         class="notepad.include.TxtContent"
+         image="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*txtFile.png">
+      
+      <uid id="notepad.implement.bindingManager.window"
+           isInclude="false"
+           include="url://www.nvwa.com/include/notepad\notepad.include"
+           optimal=""
+           forceUsed="false"/>
+      
+    </__t>
+
+    <__t name="zyouhua@gmail.com:nvwaproject"
+         class="program.optimal.Project"
+         image="url://www.nvwa.com/implement/notepad\notepad.implement/descriptor*iconSolution.png">
+
+      <uid id="notepad.implement.bindingManager.nvwaproject"
+           isInclude="true"
+           include="url://www.nvwa.com/include/program\program.include"
+           optimal="url://www.nvwa.com/library/program\program.optimal"
+           forceUsed="false"/>
+
+    </__t>
+
+  </bindings>
+  
+</bindingManager>
