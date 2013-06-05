@@ -432,8 +432,8 @@ namespace platform.optimal
                 }
             }
             return false;
-
         }
+
         public __t _findContent<__t>(string nUrl)
         {
             UrlParser urlParser_ = new UrlParser(nUrl);
